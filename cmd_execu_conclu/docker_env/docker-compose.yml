@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+    cmd_execu_conclu:
+        build: .
+        image: cmd_execu_conclu
+        restart: unless-stopped
+        ports:
+            - "10001:22"
+            - "9999:80"
+        volumes:
+          - ./html:/var/www/html

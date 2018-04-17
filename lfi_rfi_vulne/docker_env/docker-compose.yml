@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+    lfi_rfi:
+        build: .
+        image: lfi_rfi
+        restart: unless-stopped
+        ports:
+            - "10000:22"
+            - "8099:80"
+        volumes:
+          - ./php:/var/www/html
+          - ./attachment:/attachment

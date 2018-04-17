@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+    cen7_php5_httpd:
+        build: .
+        image: cen7_php5_httpd
+        restart: unless-stopped
+        ports:
+            - "10000:22"
+            - "80:80"
+        volumes:
+          - ./html:/var/www/html
