@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+    cen6_mysq:
+        build: .
+        image: cen6_mysq
+        restart: unless-stopped
+        ports:
+            - "10006:22"
+            - "9990:80"
+        volumes:
+          - ./html:/var/www/html
